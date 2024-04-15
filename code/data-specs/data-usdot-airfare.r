@@ -17,5 +17,6 @@ prices_csv <- read.csv("data/USDOT/Consumer_Airfare_Report__Table_1a_-_All_U.S._
 
 prices <- as.data.table(prices_csv)
 
+## Remove out of range data 
 
-
+prices <- prices[Year <= 2024 & Year >= 2020]

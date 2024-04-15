@@ -54,8 +54,12 @@ flights[,c("STATE","AIRPORT","AIRPORT_CITY") := NULL]
 flights$HUB2HUB <- flights[, ORIGIN_HUB == DEST_HUB]
 ################################################################################################## GREAT PLACE FOR A UNIT TEST 
 
+######## Create Quarter Date Variable 
 
-## Passengers per mile traveled
+flights$QUARTER <- ceiling(as.integer(flights$MONTH)/3)
+flights
+
+######## Passengers per mile traveled
 
 flights$PASSPERMILE <- flights[, PASSENGERS / DISTANCE]
 
