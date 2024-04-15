@@ -50,3 +50,5 @@ rsconnect/
 
 # API Passwords and Keys 
 apiKeys.r
+
+# Renv Files
