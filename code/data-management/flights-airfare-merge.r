@@ -1,4 +1,4 @@
-source("code/data-specs/data-flights.r")
+source("code/data-management/flights-hubs-merge.r")
 source("code/data-specs/data-usdot-airfare.r")
 
 
@@ -16,4 +16,5 @@ flight_prices$carrier_hf_flag <- flight_prices[, UNIQUE_CARRIER == carrier_lg & 
 
 flight_prices <- na.omit(flight_prices)
 
-flight_prices
+
+fwrite(flight_prices,"data/flight-price-hub-data-cleaned.csv")
