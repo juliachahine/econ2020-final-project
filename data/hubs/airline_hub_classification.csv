@@ -1,0 +1,132 @@
+﻿STATE,AIRPORT,AIRPORT_CITY,AIRPORT_ID,AIRPORT_HUB
+Alaska,Anchorage (ANC),Anchorage ,ANC,Alaska Airlines
+California,Los Angeles (LAX),Los Angeles ,LAX,Alaska Airlines
+California,San Francisco (SFO),San Francisco ,SFO,Alaska Airlines
+Oregon,Portland (PDX),Portland ,PDX,Alaska Airlines
+Washington,Seattle (SEA),Seattle ,SEA,Alaska Airlines
+California,San Diego (SAN),San Diego ,SAN,Alaska Airlines 
+California,San Jose (SJC),San Jose ,SJC,Alaska Airlines 
+Idaho,Boise (BOI),Boise ,BOI,Alaska Airlines 
+Arizona,Phoenix-Mesa (AZA),Phoenix-Mesa ,AZA,Allegiant Air 
+California,Los Angeles (LAX),Los Angeles ,LAX,Allegiant Air 
+Florida,Fort Lauderdale (FLL),Fort Lauderdale ,FLL,Allegiant Air 
+Florida,Sanford (SFB),Sanford ,SFB,Allegiant Air 
+Florida,Fort Walton Beach (VPS),Fort Walton Beach ,VPS,Allegiant Air 
+Florida,Punta Gorda (PGD),Punta Gorda ,PGD,Allegiant Air 
+Florida,St. Petersburg (FL) (PIE),St. Petersburg,PIE,Allegiant Air 
+Georgia,Savannah (SAV),Savannah ,SAV,Allegiant Air 
+Indiana,Indianapolis (IND),Indianapolis ,IND,Allegiant Air 
+Iowa,Des Moines (DSM),Des Moines ,DSM,Allegiant Air 
+Kentucky,Cincinnati (CVG),Cincinnati ,CVG,Allegiant Air 
+Michigan,Flint (FNT),Flint ,FNT,Allegiant Air 
+Michigan,Grand Rapids (GRR),Grand Rapids ,GRR,Allegiant Air 
+Nevada,Las Vegas (LAS),Las Vegas ,LAS,Allegiant Air 
+North Carolina,Asheville (AVL),Asheville ,AVL,Allegiant Air 
+Pennsylvania,Pittsburgh (PIT),Pittsburgh ,PIT,Allegiant Air 
+Pennsylvania,Allentown (ABE),Allentown ,ABE,Allegiant Air 
+Tennessee,Knoxville (TYS),Knoxville ,TYS,Allegiant Air 
+Tennessee,Nashville (BNA),Nashville ,BNA,Allegiant Air 
+Texas,Austin (AUS),Austin ,AUS,Allegiant Air 
+Utah,Provo (PVU),Provo ,PVU,Allegiant Air 
+Washington,Bellingham (BLI),Bellingham ,BLI,Allegiant Air 
+Wisconsin,Appleton (ATW),Appleton ,ATW,Allegiant Air 
+Kentucky,Cincinnati (CVG),Cincinnati ,CVG,Amazon Air
+Arizona,Phoenix-Sky Harbor (PHX),Phoenix-Sky Harbor ,PHX,American Airlines
+California,Los Angeles (LAX),Los Angeles ,LAX,American Airlines
+Florida,Miami (MIA),Miami ,MIA,American Airlines
+Illinois,Chicago-O'Hare (ORD),Chicago-O'Hare ,ORD,American Airlines
+New York,New York-JFK (JFK),New York-JFK ,JFK,American Airlines
+New York,New York-LaGuardia (LGA),New York-LaGuardia ,LGA,American Airlines
+North Carolina,Charlotte (CLT),Charlotte ,CLT,American Airlines
+Pennsylvania,Philadelphia (PHL),Philadelphia ,PHL,American Airlines
+Texas,Dallas/Fort Worth (DFW),Dallas/Fort Worth ,DFW,American Airlines
+Virginia,Washington-Reagan (DCA),Washington-Reagan ,DCA,American Airlines
+California,Hollywood Burbank Airport (BUR),Hollywood Burbank Airport ,BUR,Avelo Airlines
+Connecticut,New Haven (HVN),New Haven ,HVN,Avelo Airlines 
+Florida,Orlando (MCO),Orlando ,MCO,Avelo Airlines 
+Connecticut,Hartford (BDL),Hartford ,BDL,Breeze Airways 
+Florida,Tampa (TPA),Tampa ,TPA,Breeze Airways 
+Louisiana,New Orleans (MSY),New Orleans ,MSY,Breeze Airways 
+South Carolina,Charleston (CHS),Charleston ,CHS,Breeze Airways 
+Virginia,Norfolk (ORF),Norfolk ,ORF,Breeze Airways 
+Massachusetts,Boston (BOS),Boston ,BOS,Cape Air
+Missouri,St. Louis (STL),St. Louis ,STL,Cape Air
+California,Los Angeles (LAX),Los Angeles ,LAX,Delta Air Lines
+Georgia,Atlanta (ATL),Atlanta ,ATL,Delta Air Lines
+Massachusetts,Boston (BOS),Boston ,BOS,Delta Air Lines
+Michigan,Detroit (DTW),Detroit ,DTW,Delta Air Lines
+Minnesota,Minneapolis (MSP),Minneapolis ,MSP,Delta Air Lines
+New York,New York-JFK (JFK),New York-JFK ,JFK,Delta Air Lines
+New York,New York-LaGuardia (LGA),New York-LaGuardia ,LGA,Delta Air Lines
+Utah,Salt Lake City (SLC),Salt Lake City ,SLC,Delta Air Lines
+Washington,Seattle (SEA),Seattle ,SEA,Delta Air Lines
+Kentucky,Cincinnati (CVG),Cincinnati ,CVG,Delta Air Lines
+North Carolina,Raleigh (RDU),Raleigh ,RDU,Delta Air Lines
+Kentucky,Cincinnati (CVG),Cincinnati ,CVG,DHL Aviation
+Florida,Miami (MIA),Miami ,MIA,"Eastern Airlines, LLC"
+New York,New York-JFK (JFK),New York-JFK ,JFK,"Eastern Airlines, LLC "
+Indiana,Indianapolis (IND),Indianapolis ,IND,FedEx Express
+North Carolina,Greensboro (GSO),Greensboro ,GSO,FedEx Express
+Tennessee,Memphis (MEM),Memphis ,MEM,FedEx Express
+Colorado,Denver (DEN),Denver ,DEN,Frontier Airlines
+Arizona,Phoenix-Sky Harbor (PHX),Phoenix-Sky Harbor ,PHX,Frontier Airlines 
+Florida,Miami (MIA),Miami ,MIA,Frontier Airlines 
+Florida,Orlando (MCO),Orlando ,MCO,Frontier Airlines 
+Florida,Tampa (TPA),Tampa ,TPA,Frontier Airlines 
+Georgia,Atlanta (ATL),Atlanta ,ATL,Frontier Airlines 
+Illinois,Chicago-Midway (MDW),Chicago-Midway ,MDW,Frontier Airlines 
+Nevada,Las Vegas (LAS),Las Vegas ,LAS,Frontier Airlines 
+New Jersey,Trenton (TTN),Trenton ,TTN,Frontier Airlines 
+Ohio,Cleveland (CLE),Cleveland ,CLE,Frontier Airlines 
+Pennsylvania,Philadelphia (PHL),Philadelphia ,PHL,Frontier Airlines 
+Hawaii,Honolulu (HNL),Honolulu ,HNL,Hawaiian Airlines
+Hawaii,Kahului (OGG),Kahului ,OGG,Hawaiian Airlines
+California,Los Angeles (LAX),Los Angeles ,LAX,JetBlue Airways 
+Florida,Fort Lauderdale (FLL),Fort Lauderdale ,FLL,JetBlue Airways 
+Florida,Orlando (MCO),Orlando ,MCO,JetBlue Airways 
+Massachusetts,Boston (BOS),Boston ,BOS,JetBlue Airways 
+New York,New York-JFK (JFK),New York-JFK ,JFK,JetBlue Airways 
+Nevada,Las Vegas (LAS),Las Vegas ,LAS,JSX 
+Indiana,Indianapolis (IND),Indianapolis ,IND,Mountain Air Cargo
+Indiana,Indianapolis (IND),Indianapolis ,IND,Republic Airways 
+Missouri,St. Louis (STL),St. Louis ,STL,Republic Airways 
+Florida,Fort Lauderdale (FLL),Fort Lauderdale ,FLL,Silver Airways
+Florida,Orlando (MCO),Orlando ,MCO,Silver Airways
+Florida,Tampa (TPA),Tampa ,TPA,Silver Airways
+Pennsylvania,Pittsburgh (PIT),Pittsburgh ,PIT,Southern Airways Express
+Tennessee,Memphis (MEM),Memphis ,MEM,Southern Airways Express
+Arizona,Phoenix-Sky Harbor (PHX),Phoenix-Sky Harbor ,PHX,Southwest Airlines 
+California,Los Angeles (LAX),Los Angeles ,LAX,Southwest Airlines 
+California,Oakland (OAK),Oakland ,OAK,Southwest Airlines 
+Colorado,Denver (DEN),Denver ,DEN,Southwest Airlines 
+Florida,Orlando (MCO),Orlando ,MCO,Southwest Airlines 
+Florida,Tampa (TPA),Tampa ,TPA,Southwest Airlines 
+Georgia,Atlanta (ATL),Atlanta ,ATL,Southwest Airlines 
+Illinois,Chicago-Midway (MDW),Chicago-Midway ,MDW,Southwest Airlines 
+Maryland,Baltimore (BWI),Baltimore ,BWI,Southwest Airlines 
+Missouri,St. Louis (STL),St. Louis ,STL,Southwest Airlines 
+Nevada,Las Vegas (LAS),Las Vegas ,LAS,Southwest Airlines 
+Tennessee,Nashville (BNA),Nashville ,BNA,Southwest Airlines 
+Texas,Dallas-Love Field (DAL),Dallas-Love Field ,DAL,Southwest Airlines 
+Texas,Houston-Hobby (HOU),Houston-Hobby ,HOU,Southwest Airlines 
+Florida,Miami (MIA),Miami ,MIA,Spirit Airlines 
+Florida,Fort Lauderdale (FLL),Fort Lauderdale ,FLL,Spirit Airlines 
+Florida,Orlando (MCO),Orlando ,MCO,Spirit Airlines 
+Georgia,Atlanta (ATL),Atlanta ,ATL,Spirit Airlines 
+Illinois,Chicago-O'Hare (ORD),Chicago-O'Hare ,ORD,Spirit Airlines 
+Michigan,Detroit (DTW),Detroit ,DTW,Spirit Airlines 
+Nevada,Las Vegas (LAS),Las Vegas ,LAS,Spirit Airlines 
+New Jersey,Atlantic City (ACY),Atlantic City ,ACY,Spirit Airlines 
+Texas,Dallas/Fort Worth (DFW),Dallas/Fort Worth ,DFW,Spirit Airlines 
+Minnesota,Minneapolis (MSP),Minneapolis ,MSP,Sun Country Airlines
+Nevada,Las Vegas (LAS),Las Vegas ,LAS,Sun Country Airlines 
+Texas,Dallas/Fort Worth (DFW),Dallas/Fort Worth ,DFW,Sun Country Airlines 
+California,Los Angeles (LAX),Los Angeles ,LAX,United Airlines
+California,San Francisco (SFO),San Francisco ,SFO,United Airlines
+Colorado,Denver (DEN),Denver ,DEN,United Airlines
+Illinois,Chicago-O'Hare (ORD),Chicago-O'Hare ,ORD,United Airlines
+New Jersey,Newark (EWR),Newark ,EWR,United Airlines
+Texas,Houston-Intercontinental (IAH),Houston-Intercontinental ,IAH,United Airlines
+Virginia,Washington-Dulles (IAD),Washington-Dulles ,IAD,United Airlines
+Kentucky,Louisville (SDF),Louisville ,SDF,United Parcel Service 
+South Carolina,Columbia (CAE),Columbia ,CAE,United Parcel Service 
