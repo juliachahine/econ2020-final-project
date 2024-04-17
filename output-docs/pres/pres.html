@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="Julia Chahine">
-  <title>AIRFARE PRICING</title>
+  <title>AIRLINE HUB PRICING</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -326,7 +326,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">AIRFARE PRICING</h1>
+  <h1 class="title">AIRLINE HUB PRICING</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -426,7 +426,9 @@ Julia Chahine
 </ul>
 </div>
 </div>
-<p>and 52 Origin Airports.</p>
+<p>and 52 Origin Airports.<br>
+</p>
+<p>With these data, I matched each flight to origin hub and destination hub and was then able to determine which flights were hub to hub.</p>
 </section>
 <section id="figure" class="slide level2">
 <h2>FIGURE</h2>
@@ -434,12 +436,50 @@ Julia Chahine
 <img data-src="figure.png" class="r-stretch"></section>
 <section id="regression" class="slide level2">
 <h2>REGRESSION</h2>
-<p>Everyone knows I’m not an econometrician:</p>
+<p>Everyone knows I’m not an econometrician (please, squint and forget everything you know about exogeneity):</p>
+<div class="cell" data-execute="true">
+<div class="cell-output cell-output-stdout">
+<pre><code>                              hub_iv_mod
+Dependent Var.:                  fare_pm
+                                        
+HUB2HUBTRUE             0.0425* (0.0202)
+as.factor(CARRIER)AS   -0.0278* (0.0118)
+as.factor(CARRIER)DL    -0.0069 (0.0077)
+as.factor(CARRIER)F9   -0.0263* (0.0117)
+as.factor(CARRIER)G4  -0.0398** (0.0135)
+as.factor(CARRIER)NK -0.0425*** (0.0094)
+as.factor(CARRIER)UA    -0.0027 (0.0069)
+as.factor(CARRIER)WN -0.0314*** (0.0079)
+Fixed-Effects:       -------------------
+ORIGIN                               Yes
+YEAR                                 Yes
+DEST                                 Yes
+____________________ ___________________
+S.E.: Clustered               by: ORIGIN
+Observations                      51,074
+R2                               0.22738
+Within R2                        0.01289
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<!-- 
+#| format: latex
+#| echo: false
+#| execute: true
+#| output: true -->
+</section>
+<section id="unit-test" class="slide level2">
+<h2>UNIT TEST</h2>
+<p><br>
+I created a unit test that checks the merge between flight data and hub classifications was successful.<br>
+<br>
+The unit test is not perfect, but my code does pass it!</p>
 </section>
 <section id="conclusions" class="slide level2">
 <h2>CONCLUSIONS</h2>
 <ul>
-<li>Quarto is not the easiest way to make presentations</li>
+<li>Quarto is not the easiest way to make presentations (I struggled)</li>
 <li>Airline Carriers seem to increase prices flying from Hub to Hub, unlike (what I have experience as) colloquial belief</li>
 </ul>
 <div class="quarto-auto-generated-content">
@@ -658,6 +698,44 @@ Julia Chahine
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

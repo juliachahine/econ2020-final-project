@@ -1,9 +1,9 @@
 ---
-title: "AIRFARE PRICING"
+title: "AIRLINE HUB PRICING"
 author: "Julia Chahine"
 format: revealjs
-filter: 
-    - parse-latex
+# filter: 
+#     - parse-latex
 output:
   quarto::presentation:
     center: true
@@ -80,7 +80,10 @@ I looked at 8 U.S. Carriers
 
 :::
 
-and 52 Origin Airports. 
+and 52 Origin Airports. \
+
+
+With these data, I matched each flight to origin hub and destination hub and was then able to determine which flights were hub to hub.
 
 
 ## FIGURE
@@ -88,50 +91,78 @@ and 52 Origin Airports.
 
 ## REGRESSION
 
-Everyone knows I'm not an econometrician:
+Everyone knows I'm not an econometrician (please, squint and forget everything you know about exogeneity):
+```{r}
+#| execute: true
+library(data.table)
+library(estimatr)
+library(fixest)
 
-\begingroup
-\begin{tabular}{lc}
-   \tabularnewline \midrule \midrule
-   Dependent Variable:  & fare\_pm\\   
-   Model:               & (1)\\  
-   \midrule
-   \emph{Variables}\\
-   HUB2HUBTRUE          & 0.0425$^{**}$\\   
-                        & (0.0202)\\   
-   as.factor(CARRIER)AS & -0.0278$^{**}$\\   
-                        & (0.0118)\\   
-   as.factor(CARRIER)DL & -0.0069\\   
-                        & (0.0077)\\   
-   as.factor(CARRIER)F9 & -0.0263$^{**}$\\   
-                        & (0.0117)\\   
-   as.factor(CARRIER)G4 & -0.0398$^{***}$\\   
-                        & (0.0135)\\   
-   as.factor(CARRIER)NK & -0.0425$^{***}$\\   
-                        & (0.0094)\\   
-   as.factor(CARRIER)UA & -0.0027\\   
-                        & (0.0069)\\   
-   as.factor(CARRIER)WN & -0.0314$^{***}$\\   
-                        & (0.0079)\\   
-   \midrule
-   \emph{Fixed-effects}\\
-   ORIGIN               & Yes\\  
-   YEAR                 & Yes\\  
-   DEST                 & Yes\\  
-   \midrule
-   \emph{Fit statistics}\\
-   Observations         & 51,074\\  
-   R$^2$                & 0.22738\\  
-   Within R$^2$         & 0.01289\\  
-   \midrule \midrule
-   \multicolumn{2}{l}{\emph{Clustered (ORIGIN) standard-errors in parentheses}}\\
-   \multicolumn{2}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
-\end{tabular}
-\endgroup
+flight_prices <- read.csv("/Users/juliachahine/Library/CloudStorage/Dropbox/Mac (2)/Documents/Brown/2023_2024 Brown/2024_spring/ECON2020_ECONANALYSIS/econ2020-final-project/data/flight-price-hub-data-cleaned.csv")
 
+hub_iv_mod <- feols(fare_pm ~ as.factor(CARRIER)| ORIGIN + YEAR + DEST| HUB2HUB ~  AS_HUB2HUB + AA_HUB2HUB + DL_HUB2HUB + G4_HUB2HUB + F9_HUB2HUB + NK_HUB2HUB + WN_HUB2HUB + UA_HUB2HUB, flight_prices)
 
+etable(hub_iv_mod)
+```
+
+<!-- 
+#| format: latex
+#| echo: false
+#| execute: true
+#| output: true -->
+```{tex} 
+#| echo: false
+#| output: true 
+    \documentclass{article}
+    \usepackage{booktabs} % For better table formatting
+    \usepackage{amsmath} % For mathematical symbols
+
+    \begin{document}
+    \begin{tabular}{lc}
+    \tabularnewline \midrule \midrule
+    Dependent Variable:  & fare\_pm\\   
+    Model:               & (1)\\  
+    \midrule
+    \emph{Variables}\\
+    HUB2HUBTRUE          & 0.0425$^{**}$\\   
+                            & (0.0202)\\   
+    as.factor(CARRIER)AS & -0.0278$^{**}$\\   
+                            & (0.0118)\\   
+    as.factor(CARRIER)DL & -0.0069\\   
+                            & (0.0077)\\   
+    as.factor(CARRIER)F9 & -0.0263$^{**}$\\   
+                            & (0.0117)\\   
+    as.factor(CARRIER)G4 & -0.0398$^{***}$\\   
+                            & (0.0135)\\   
+    as.factor(CARRIER)NK & -0.0425$^{***}$\\   
+                            & (0.0094)\\   
+    as.factor(CARRIER)UA & -0.0027\\   
+                            & (0.0069)\\   
+    as.factor(CARRIER)WN & -0.0314$^{***}$\\   
+                            & (0.0079)\\   
+    \midrule
+    \emph{Fixed-effects}\\
+    ORIGIN               & Yes\\  
+    YEAR                 & Yes\\  
+    DEST                 & Yes\\  
+    \midrule
+    \emph{Fit statistics}\\
+    Observations         & 51,074\\  
+    R$^2$                & 0.22738\\  
+    Within R$^2$         & 0.01289\\  
+    \midrule \midrule
+    \multicolumn{2}{l}{\emph{Clustered (ORIGIN) standard-errors in parentheses}}\\
+    \multicolumn{2}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+    \end{tabular}
+    \end{document}
+```
+## UNIT TEST
+\
+I created a unit test that checks the merge between flight data and hub classifications was successful. \
+\
+The unit test is not perfect, but my code does pass it! 
 
 ## CONCLUSIONS
-- Quarto is not the easiest way to make presentations
+- Quarto is not the easiest way to make presentations (I struggled)
 - Airline Carriers seem to increase prices flying from Hub to Hub, unlike (what I have experience as) colloquial belief 
 
