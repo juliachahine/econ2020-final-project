@@ -11,3 +11,8 @@ hub_iv_mod <- feols(fare_pm ~ as.factor(CARRIER)| ORIGIN + YEAR + DEST + fare_lg
 # etable(hub_iv_mod,tex = TRUE)
 summary(hub_iv_mod)
 etable(hub_iv_mod)
+
+tidy_hub_iv <- broom::tidy(hub_iv_mod)
+tidy_hub_iv
+
+write.csv(tidy_hub_iv,"output/hub_IV_reg.csv")
