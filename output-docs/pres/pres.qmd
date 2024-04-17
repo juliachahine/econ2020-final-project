@@ -2,8 +2,6 @@
 title: "AIRLINE HUB PRICING"
 author: "Julia Chahine"
 format: revealjs
-# filter: 
-#     - parse-latex
 output:
   quarto::presentation:
     center: true
@@ -15,8 +13,6 @@ execute:
 
 ## MOTIVATION
 While flying home for spring break, I had a conversation about flights being cheaper when flying from carrier hub to carrier hub. \
-\
-... so, I got to thinking \
 \
 
 This was also around the time I got stressed about this project! And, alas! 
