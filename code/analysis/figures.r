@@ -7,5 +7,13 @@ figure1 <- ggplot(data = flight_prices) +
 figure1
 
 figure1 <- ggplot(data = flight_prices) + 
-    geom_boxplot(aes(x = as.factor(DL_HUB2HUB), y = fare_pm))
+    geom_boxplot(aes(fare_pm, as.factor(UNIQUE_CARRIER_NAME), color = as.factor(HUB2HUB)), notch = TRUE)
 figure1
+
+fig2 <- ggplot(data = flight_prices) + 
+    geom_boxplot(aes(fare_pm, as.factor(UNIQUE_CARRIER_NAME), color = as.factor(DL_HUB2HUB)))
+fig2
+
+fig2 <- ggplot(data = flight_prices) + 
+    geom_boxplot(aes(fare_pm, as.factor(UNIQUE_CARRIER_NAME), color = as.factor(UA_HUB2HUB)))
+fig2
