@@ -2,8 +2,8 @@
 title: "AIRFARE PRICING"
 author: "Julia Chahine"
 format: revealjs
-filters:
-  - parse-latex
+filter: 
+    - parse-latex
 output:
   quarto::presentation:
     center: true
@@ -14,13 +14,20 @@ execute:
 ---
 
 ## MOTIVATION
-While flying home for spring break, I had a conversation about flights being cheaper when flying from carrier hub to carrier hub. 
-... so, I got to thinking
+While flying home for spring break, I had a conversation about flights being cheaper when flying from carrier hub to carrier hub. \
+\
+... so, I got to thinking \
+\
+
+This was also around the time I got stressed about this project! And, alas! 
 
 
 ## RESEARCH QUESTION 
 
-**GOAL:** To investigate the relationship between flight prices (fares) and carrier hubs:
+\
+**GOAL:** \ To investigate the relationship between flight prices (fares) and carrier hubs
+\
+\
 
 ### **Q:** How does flying from Hub to Hub effect prices? 
 
@@ -54,7 +61,8 @@ While flying home for spring break, I had a conversation about flights being che
 
 ## ANALYSIS {.smaller}
 I looked at 8 U.S. Carriers 
-::::{.columns}
+
+:::{.columns}
 
 ::: {.column width="40%"}
 - AS: Alaska Airlines
@@ -70,8 +78,10 @@ I looked at 8 U.S. Carriers
 - WN : Southwest Airlines
 :::
 
-::::
+:::
+
 and 52 Origin Airports. 
+
 
 ## FIGURE
 ![](figure.png)
@@ -79,8 +89,8 @@ and 52 Origin Airports.
 ## REGRESSION
 
 Everyone knows I'm not an econometrician:
-```{=latex}
-\begin{table}
+
+\begingroup
 \begin{tabular}{lc}
    \tabularnewline \midrule \midrule
    Dependent Variable:  & fare\_pm\\   
@@ -117,8 +127,9 @@ Everyone knows I'm not an econometrician:
    \multicolumn{2}{l}{\emph{Clustered (ORIGIN) standard-errors in parentheses}}\\
    \multicolumn{2}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
 \end{tabular}
-\end{table}
-```
+\endgroup
+
+
 
 ## CONCLUSIONS
 - Quarto is not the easiest way to make presentations

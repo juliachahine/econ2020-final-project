@@ -14,4 +14,3 @@ tidy_hub_iv
 
 write.csv(tidy_hub_iv,"output/hub_IV_reg.csv")
 
-flight_prices
